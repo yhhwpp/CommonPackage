@@ -22,5 +22,5 @@ firewall-cmd --zone=public --add-port=10010/tcp --permanent
 firewall-cmd --reload
 
 #安装bbr 
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/resume/master/bbr_install && chmod +x bbr_install && ./bbr_install
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/bbr_install && chmod +x bbr_install && ./bbr_install
 reboot
