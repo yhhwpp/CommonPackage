@@ -7,7 +7,7 @@ yum install zip unzip vim git epel-release gcc gettext autoconf libtool automake
 rngd -r /dev/urandom
 mkdir ~/v2
 cd ~/v2
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/restart.sh && chmod +x restart.sh
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/restart.sh -O restart.sh && chmod +x restart.sh
 mkdir logs
 wget https://github.com/v2ray/v2ray-core/releases/download/v4.19.1/v2ray-linux-64.zip
 unzip v2ray-linux-64.zip
@@ -18,6 +18,7 @@ firewall-cmd --zone=public --add-port=10011/tcp --permanent
 firewall-cmd --reload
 
 cd ~
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/spy.sh && chmod +x spy.sh && echo "*/1 * * * * /root/./spy.sh" >> /var/spool/cron/root
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/spy.sh -O spy.sh && chmod +x spy.sh && echo "*/1 * * * * /root/./spy.sh" >> /var/spool/cron/root
+
 #安装bbr 
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/bbr_install && chmod +x bbr_install && ./bbr_install
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/bbr_install -O bbr_install && chmod +x bbr_install && ./bbr_install
