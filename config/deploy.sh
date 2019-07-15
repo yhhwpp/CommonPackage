@@ -17,8 +17,5 @@ firewall-cmd --zone=public --add-port=10010/tcp --permanent
 firewall-cmd --zone=public --add-port=10011/tcp --permanent
 firewall-cmd --reload
 
-cd ~
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/spy.sh -O spy.sh && chmod +x spy.sh && echo "*/1 * * * * /root/./spy.sh" >> /var/spool/cron/root
-
 #安装bbr 
 wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/bbr_install -O bbr_install && chmod +x bbr_install && ./bbr_install
