@@ -7,6 +7,7 @@ yum install zip unzip vim git epel-release gcc gettext autoconf libtool automake
 rngd -r /dev/urandom
 mkdir ~/v2
 cd ~/v2
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/restart.sh && chmod +x restart.sh
 mkdir logs
 wget https://github.com/v2ray/v2ray-core/releases/download/v4.19.1/v2ray-linux-64.zip
 unzip v2ray-linux-64.zip
