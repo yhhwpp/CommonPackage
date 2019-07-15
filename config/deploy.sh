@@ -14,7 +14,6 @@ unzip v2ray-linux-64.zip
 wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/config.json -O config.json
 
 firewall-cmd --zone=public --add-port=10010/tcp --permanent
-firewall-cmd --reload
 firewall-cmd --zone=public --add-port=10011/tcp --permanent
 firewall-cmd --reload
 
