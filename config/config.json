@@ -19,6 +19,20 @@
                 }
             ]
         }
+    },{
+        "port": 10011,
+        "protocol": "shadowsocks",
+        "startTime": "2019-07-15 19:54:06",
+        "termOfValidity": 0,
+        "maxFlux": 10,
+        "serverIp": "45.77.109.22",
+        "settings": {
+            "password": "jp(SIVVD1AjqaFiG",
+            "method": "aes-128-gcm",
+            "ota": false,
+            "level": 0,
+            "network": "tcp"
+        }
     }
   ],
   "outbounds": [

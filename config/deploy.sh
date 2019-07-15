@@ -15,6 +15,8 @@ wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/Common
 
 firewall-cmd --zone=public --add-port=10010/tcp --permanent
 firewall-cmd --reload
+firewall-cmd --zone=public --add-port=10011/tcp --permanent
+firewall-cmd --reload
 
 #安装bbr 
 wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/bbr_install && chmod +x bbr_install && ./bbr_install
