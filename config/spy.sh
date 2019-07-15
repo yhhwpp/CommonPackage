@@ -1,1 +1,2 @@
+export TZ=Asia/Shanghai
 /usr/sbin/iptables -n -L -v -x -t filter|grep 'tcp.*:'|awk '{print "{\"port\":"substr($10,5,20)":,\"type\":\""substr($10,1,3)"\",\"inFlux\":\""$1"\",\"outFlux\":\""$2"\",\"totalFlux\":\""$1+$2"\",\"time\":\""strftime("%Y-%m-%d %T", systime())"\"}"}' > spy.log
