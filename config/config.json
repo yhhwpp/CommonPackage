@@ -1,0 +1,45 @@
+{
+  "log": {
+    "access": "./logs/access.log",
+    "loglevel": "warning",
+    "error": "./logs/error.log"
+  },
+  "dns": {},
+  "stats": {},
+  "inbounds": [
+    {
+        "port": 10010,
+        "protocol": "vmess",     
+        "settings": {
+            "disableInsecureEncryption": false,
+            "clients": [
+                {
+                    "id": "ffc19223-6d42-4e3d-843c-88147960a6d3",
+                    "alterId": 64
+                }
+            ]
+        }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "outboundTag": "blocked",
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ]
+      }
+    ]
+  },
+  "policy": {},
+  "reverse": {},
+  "transport": {}
+}
