@@ -11,7 +11,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/Common
 mkdir logs
 wget https://github.com/v2ray/v2ray-core/releases/download/v4.19.1/v2ray-linux-64.zip
 unzip v2ray-linux-64.zip
-wget https://raw.githubusercontent.com/freeeeeedom/resume/master/config.json -O config.json
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/config.json -O config.json
 
 #流量控制初始化
 iptables -P INPUT ACCEPT
