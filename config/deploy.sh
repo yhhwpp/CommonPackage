@@ -16,14 +16,10 @@ wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/Common
 firewall-cmd --zone=public --add-port=10010/tcp --permanent
 firewall-cmd --reload
 
-#安装bbr 
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/bbr_install && chmod +x bbr_install && ./bbr_install
-
-
 #流量控制初始化
 iptables -P INPUT ACCEPT
 iptables -F
 iptables -A OUTPUT -p tcp --sport 10010
 iptables -A INPUT -p tcp --dport 10010
-
-reboot
+#安装bbr 
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/bbr_install && chmod +x bbr_install && ./bbr_install
