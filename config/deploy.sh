@@ -7,11 +7,11 @@ yum install zip unzip vim git shadowsocks-libev rng-tools -y
 rngd -r /dev/urandom
 mkdir ~/v2
 cd ~/v2
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/restart.sh -O restart.sh && chmod +x restart.sh
 mkdir logs
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/restart.sh -O restart.sh && chmod +x restart.sh
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/config.json -O config.json
 wget --no-check-certificate https://github.com/v2ray/v2ray-core/releases/download/v4.20.0/v2ray-linux-64.zip
 unzip v2ray-linux-64.zip
-wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/config.json -O config.json
 
 firewall-cmd --zone=public --add-port=10010/tcp --permanent
 firewall-cmd --zone=public --add-port=10011/tcp --permanent
