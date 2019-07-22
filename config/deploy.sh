@@ -1,18 +1,23 @@
+#安装wget
 yum -y install wget
+#安装yum库
 wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
 cp librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/
 yum -y update
+#安装ss
 yum install zip unzip vim git shadowsocks-libev rng-tools -y
-
+#启动rngd服务
 rngd -r /dev/urandom
+#下载安装v2ray和相关脚本
 mkdir ~/v2
 cd ~/v2
 mkdir logs
 wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/restart.sh -O restart.sh && chmod +x restart.sh
 wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/config.json -O config.json
-wget --no-check-certificate https://github.com/v2ray/v2ray-core/releases/download/v4.20.0/v2ray-linux-64.zip
+wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/CommonPackage/master/config/v2ray-linux-64.zip
 unzip v2ray-linux-64.zip
 
+#防火墙开放端口
 firewall-cmd --zone=public --add-port=10010/tcp --permanent
 firewall-cmd --zone=public --add-port=10011/tcp --permanent
 firewall-cmd --reload
