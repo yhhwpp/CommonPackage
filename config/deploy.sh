@@ -18,8 +18,16 @@ wget --no-check-certificate https://raw.githubusercontent.com/freeeeeedom/Common
 
 
 #防火墙开放端口
-firewall-cmd --zone=public --add-port=10010/tcp --permanent
-firewall-cmd --zone=public --add-port=10011/tcp --permanent
+firewall-cmd --zone=public --add-port=20710/tcp --permanent
+firewall-cmd --zone=public --add-port=20711/tcp --permanent
+firewall-cmd --zone=public --add-port=20712/tcp --permanent
+firewall-cmd --zone=public --add-port=20713/tcp --permanent
+firewall-cmd --zone=public --add-port=20714/tcp --permanent
+firewall-cmd --zone=public --add-port=20715/tcp --permanent
+firewall-cmd --zone=public --add-port=20716/tcp --permanent
+firewall-cmd --zone=public --add-port=20717/tcp --permanent
+firewall-cmd --zone=public --add-port=20718/tcp --permanent
+firewall-cmd --zone=public --add-port=20719/tcp --permanent
 firewall-cmd --reload
 
 #安装bbr 
