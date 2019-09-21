@@ -5,7 +5,7 @@ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/li
 cp librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/
 yum -y update
 #安装ss
-yum install zip unzip vim git shadowsocks-libev rng-tools jq -y
+yum install zip unzip vim git shadowsocks-libev rng-tools jq java-1.8.0-openjdk -y
 #启动rngd服务
 rngd -r /dev/urandom
 #下载安装v2ray和相关脚本
